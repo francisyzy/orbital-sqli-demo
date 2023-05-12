@@ -7,18 +7,15 @@ const prisma = new PrismaClient();
 const echo = () => {
   try {
     bot.on("message", async (ctx) => {
-      const name = (ctx.message as Message.TextMessage).text;
-      let result = await prisma.$queryRawUnsafe(
-        `SELECT * FROM User WHERE name = '${name}';`,
-      );
-      if (typeof result !== "string") {
-        try {
-          ctx.reply(result as string);
-        } catch (error) {
-          ctx.reply("not string");
-        }
-      } else {
-        ctx.reply(result);
+      try {
+        const name = (ctx.message as Message.TextMessage).text;
+        const query = "SELECT phone_number FROM user WHERE role = 'USER' AND name = '" + name + "'"
+        ctx.reply("query: " + query)
+        let result = await prisma.$queryRawUnsafe(query);
+        console.log(result);
+        ctx.reply(JSON.stringify(result));
+      } catch (error) {
+        ctx.reply(JSON.stringify(error));
       }
     });
   } catch (error) {
