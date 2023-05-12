@@ -120,7 +120,7 @@ const helper = () => {
       }
       if (ctx.message && ctx.message.chat.type === "private") {
         await ctx.reply(
-          "Welcome to the template bot. Please register by providing your contact by pressing the keyboard button",
+          "Welcome to the SQL Injection Sample Bot. Please register by providing your contact by pressing the keyboard button. Yes, you'll pass me your real phone number. So please do not try.",
           {
             reply_markup: {
               keyboard: [
@@ -170,7 +170,7 @@ const helper = () => {
       return ctx.reply("Please /start to create an account");
     }
   });
-  bot.help((ctx) => ctx.reply("Help message"));
+  bot.help((ctx) => ctx.reply("Type a name! If the name exist in the DB, we will get you their phone number!"));
 };
 
 export default helper;
