@@ -8,7 +8,7 @@ async function seed() {
     await prisma.user.create({
       data: {
         telegramId: 1,
-        phone_number: "+1234567890",
+        phone_number: "123",
         email: "alex@example.com",
         name: "Alex",
       },
@@ -17,7 +17,7 @@ async function seed() {
     await prisma.user.create({
       data: {
         telegramId: 4,
-        phone_number: "+134567890",
+        phone_number: "234",
         email: "bob@example.com",
         name: "Bob",
       },
@@ -27,7 +27,7 @@ async function seed() {
     await prisma.user.create({
       data: {
         telegramId: 2,
-        phone_number: "+9876543210",
+        phone_number: "345",
         email: "jane@example.com",
         name: "Jane",
         role: "ADMIN",
@@ -38,7 +38,7 @@ async function seed() {
     await prisma.user.create({
       data: {
         telegramId: 3,
-        phone_number: "+987654210",
+        phone_number: "456",
         email: "john@example.com",
         name: "John",
         role: "ADMIN",
