@@ -1,7 +1,7 @@
 {
-  "name": "telegraf-postgresql-template",
+  "name": "orbital-sqli-demo",
   "version": "0.1.1",
-  "description": "Template for creating future telegram bot apps",
+  "description": "Query unsafe to see if its SQL injectable",
   "main": "dist/index.js",
   "scripts": {
     "start": "node dist/index.js",
@@ -14,13 +14,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/francisyzy/telegraf-PostgreSQL-template.git"
+    "url": "git+https://github.com/francisyzy/orbital-sqli-demo.git"
   },
   "author": "francisyzy",
   "bugs": {
-    "url": "https://github.com/francisyzy/telegraf-PostgreSQL-template/issues"
+    "url": "https://github.com/francisyzy/orbital-sqli-demo/issues"
   },
-  "homepage": "https://github.com/francisyzy/telegraf-PostgreSQL-template#readme",
+  "homepage": "https://github.com/francisyzy/orbital-sqli-demo#readme",
   "engines": {
     "node": "18.x"
   },
