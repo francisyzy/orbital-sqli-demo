@@ -14,9 +14,10 @@ model User {
   telegramId   Int      @id
   phone_number String?
   name         String
+  email        String?
   createdAt    DateTime @default(now())
   updatedAt    DateTime @default(now()) @updatedAt
-  role    Role @default(USER)
+  role         Role     @default(USER)
 }
 
 enum Role {
